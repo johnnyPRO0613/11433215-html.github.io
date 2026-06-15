@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我們與食物的距離：從「昔時」到「惜食」</title>
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .navbar a {
+            margin-left: 32px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        .navbar a:hover {
+            color: #2e7d32;
+        }
+
+        .page-title-area {
+            text-align: center;
+            padding: 60px 20px 20px 20px;
+        }
+        
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header-container h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.1em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px 60px 20px;
+        }
+
+        .intro {
+            font-size: 1.15rem;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 40px;
+            padding: 0 20px;
+            color: #2c5e43;
+        }
+
+        .intro p {
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background-color: #f4eee1;
+            padding: 25px;
+            border-left: 5px solid #d4a373;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .stat-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-text {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .focus-badge {
+            display: block;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 40px 0;
+            color: #c0392b;
+        }
+        
+        .focus-badge::before, .focus-badge::after {
+            content: " — ";
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            margin: 0 0 20px 0;
+            color: #1e3f2d;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        section h2 span {
+            color: white;
+            background-color: #3a6b51;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        section p {
+            margin-bottom: 18px;
+            text-align: justify;
+            color: #444444;
+        }
+
+        section p:last-child {
+            margin-bottom: 0;
+        }
+
+        code, .formula {
+            font-family: inherit;
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #c0392b;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        .conclusion {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: linear-gradient(to right, rgba(141,168,145,0.15), rgba(44,94,67,0.15));
+            border-radius: 12px;
+            border: 1px dashed #3a6b51;
+        }
+
+        .conclusion p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+            color: #2c5e43;
+        }
+
+        .conclusion .final-vote {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #1e3f2d;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid #ebeeec;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="images.jpg" alt="惜食Logo">
+                <span class="logo-text">惜食</span>
+            </div>
+            <nav class="navbar">
+                <a href="page.html">首頁</a>
+                <a href="about.html">認識惜食</a>
+                <a href="#Achievement">惜食成就</a>
+                <a href="#kitchen">惜食廚房</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-title-area">
+        <div class="header-container">
+            <h1>認識惜食</h1>
+        </div>
+    </div>
+
+    <main>
+        <div class="intro">
+            <p>你是否曾想過，一粒米、一卡路里、甚至一整盒過期的便當，在變成垃圾桶裡的廚餘之前，經歷了多麼漫長的旅程？</p>
+        </div>
+
+        <div class="stat-card">
+            <p>在台灣這片土地上，根據環境部（原環保署）統計，我們每年產生的廚餘量高達數百萬公噸。</p>
+            <p>如果將這些被揮霍的食物用高約 1 公尺的廚餘桶裝填並層層堆疊，其高度可以折返堆疊出<span class="highlight-text">超過 1,000 座台北 101 大樓</span>。</p>
+            <p>這不僅僅是一個數字，這意味著每分鐘都有成噸完好、甚至尚未拆封的食物，正源源不絕地走向覆滅。</p>
+        </div>
+
+        <div class="focus-badge">這不只是暴殄天物，更是一場寧靜的生態浩劫。</div>
+
+        <section>
+            <h2><span>1</span>隱形的代價：環境與氣候的重擊</h2>
+            <p>當我們丟棄一個漢堡，我們丟掉的不只是幾十塊錢，而是生產這塊牛肉所需的 2,500 公升水資源、栽種穀物所需的土地、以及運輸過程中燃燒的化石燃料。</p>
+            <p>更致命的是，這些被送往掩埋場的食物廢棄物在缺氧分解時，會釋放出大量的甲烷（<span class="formula">CH₄</span>）。甲烷對地球造成的溫室效應，是二氧化碳（<span class="formula">CO₂</span>）的 25 倍以上。</p>
+            <p>如果將全球的「剩食浪費」視為一個國家，它將成為僅次於中國與美國的全球第三大碳排放國。大自然正在為人類的飽足與浪費，支付高昂的代價。</p>
+        </section>
+
+        <section>
+            <h2><span>2</span>失衡的天秤：舌尖上的不平等</h2>
+            <p>在世界的另一端、甚至是我們城市的某個暗角，全球仍有超過 8 億人正處於長期飢餓與營養不良的困境中。諷刺的是，全球每年生產的食物總量，其實綽綽有餘地足以餵飽地球上的每一個人。</p>
+            <p>食物的生產速度從未落後，落後的是我們的分配正義與珍惜之心。我們在餐桌上的「選擇性揮霍」，正是拉大貧富與生存差距的隱形推手。</p>
+        </section>
+
+        <section>
+            <h2><span>3</span>從「昔時」的智慧，找回「惜食」的靈魂</h2>
+            <p>回望「昔時」，在老一輩的記憶裡，物資匱乏的年代造就了最深刻的感恩。那時的廚房沒有浪費，剩飯能炒成香氣四溢的蛋炒飯，過剩的蔬菜會被曝曬、醃漬成能保存整年的美味。那種對萬物的敬重、對天地的感激，是我們血脈裡對食物最浪漫的記憶。</p>
+            <p>「昔時」的珍惜，正是今天「惜食」的解方。</p>
+            <p>惜食，不是要我們過著刻苦匱乏的生活，而是重新找回對食物的敬意。當我們開始在採買前多思考一秒鐘、在外食時點剛好的份量、在廚房裡發揮創意清空冰箱，我們不只拯救了自己的荷包，更是在為這個發燒的地球降溫。</p>
+        </section>
+
+        <div class="conclusion">
+            <p>每一次我們選擇吃光盤中的食物……</p>
+            <div class="final-vote">都是在對這個世界的未來，投下溫柔且堅定的一票。</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 珍惜食物，守護地球。本網頁內容為環境永續宣導使用。</p>
+    </footer>
+
+</body>
+</html>
