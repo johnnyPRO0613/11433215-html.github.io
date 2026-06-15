@@ -1,36 +1,81 @@
 @charset "utf-8";
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: #F4F6F4;
-    color: #2C3E50;
-    line-height: 26px;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    background-color: #fafafa;
+    color: #333;
+}
+.header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.header-inner {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.header {
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2E7D32; 
+}
+.navbar a {
+    margin-left: 32px;
+    color: #333333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.navbar a:hover {
+    color: #2E7D32;
+}
+.page-banner {
     background-color: #2E7D32; 
     color: #FFFFFF;
     text-align: center;
     padding: 50px 20px;
 }
 
-.header h1 {
+.page-banner h1 {
     font-size: 35px;
     margin-bottom: 15px;
 }
 
-.header p {
+.page-banner p {
     max-width: 800px;
     margin: 0 auto;
     font-size: 18px;
 }
-
 .container {
     max-width: 1100px;
     margin: 30px auto;
@@ -76,7 +121,6 @@ body {
 .position-green  { border-left: 4px solid #2E7D32; }
 .position-orange { border-left: 4px solid #E65100; }
 .position-blue   { border-left: 4px solid #0288D1; }
-
 .partners-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -89,7 +133,6 @@ body {
     border-radius: 8px;
     padding: 20px;
 }
-
 .partner-card.card-our-team {
     background-color: #FFF8E1; 
     border: 2px solid #E65100; 
@@ -124,7 +167,6 @@ body {
     color: #555555;
     line-height: 1.6;
 }
-
 .action-section {
     background-color: #FFFFFF;
     border-radius: 16px;
@@ -250,7 +292,6 @@ body {
 .step-list li:last-child {
     margin-bottom: 0px;
 }
-
 .quote-box {
     background-color: #FFF3E0;
     border-left: 6px solid #FFB300;
